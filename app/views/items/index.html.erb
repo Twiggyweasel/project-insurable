@@ -1,0 +1,10 @@
+<h1><%= @room.name %></h1>
+
+<% @room.items.each do |item| %>
+  <ul>
+    <li><%= item.name %> <%= number_to_currency(item.value) %> <%= link_to "edit", edit_room_item_path(item.id, @room) %>
+    <%= link_to "delete", room_item_path(@room, item), method: :delete, data: { confirm: 'Are you sure?' } %> </li>
+  </ul>
+<% end %>
+
+<%= link_to "New Item", new_room_item_path(@room.id) %> <%= link_to "back", rooms_path %>
