@@ -1,0 +1,15 @@
+<div class='container'>
+  <span class='header'><h1>Properties</h1></span>
+  <br />
+  <% @homes.each do |home| %>
+  <div class="panel panel-default" style="width: 200px; display: inline-block;">
+    <div class="panel-heading"><%= home.name %></div>
+    <div class="panel-body">
+      Panel content
+    </div>
+  </div>
+  <% end %>
+  <span class='header'><h1>Collections</h1></span>
+  <br />
+  <span class='header'><h1>Misc Items</h1></span>
+</div>
