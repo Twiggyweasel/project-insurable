@@ -1,32 +1,36 @@
-<p id="notice"><%= notice %></p>
+<div class="col s9">
 
-<h1>Listing Rooms</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Room Value</th>
-      <th>Total Items</th>
-      <th colspan="4">Functions</th>
-    </tr>
-  </thead>
+  <p id="notice"><%= notice %></p>
 
-  <tbody>
-    <% @rooms.each do |room| %>
+  <h1>Listing Rooms</h1>
+
+  <table>
+    <thead>
       <tr>
-        <td><%= room.name %></td>
-        <td><%= number_to_currency(room.total_room_value) %></td>
-        <td><%= room.item_count %></td>
-        <td><%= link_to "Items", room_items_path(room) %></td>
-        <td><%= link_to 'Show', room %></td>
-        <td><%= link_to 'Edit', edit_room_path(room) %></td>
-        <td><%= link_to 'Delete', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Room Value</th>
+        <th>Total Items</th>
+        <th colspan="4">Functions</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @rooms.each do |room| %>
+        <tr>
+          <td><%= room.name %></td>
+          <td><%= number_to_currency(room.total_room_value) %></td>
+          <td><%= room.item_count %></td>
+          <td><%= link_to "Items", room_items_path(room) %></td>
+          <td><%= link_to 'Show', room %></td>
+          <td><%= link_to 'Edit', edit_room_path(room) %></td>
+          <td><%= link_to 'Delete', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Room', new_room_path %>
+  <br>
+
+  <%= link_to 'New Room', new_room_path %>
+</div>

@@ -1,9 +1,38 @@
+
 <div class="col m1 height-mod hide-on-med-and-down super">
     <ul class='white-text'>
-        <li class="sidenav-link"><a href="#"><i class="small material-icons">home</i><br />Properties</a></li>
-        <div class="divider" style="margin: 15px 0 0 0;"></div>
-        <li class="sidenav-link"><a href="#"><i class="small material-icons">collections</i><br />Collections</a></li>
-        <div class="divider" style="margin: 15px 0 0 0;"></div>
-        <li class="sidenav-link"><a href="#"><i class="small material-icons">apps</i><br />Misc.</a></li>
+      <li class="sidenav-link">
+      <%= link_to(root_path, {class: "nav-hover"}) do %>
+      <i class="small material-icons">dashboard</i><br />Dashboard
+      <% end %>
+      </li>
+      <div class="divider" style="margin: 15px 0 0 0;"></div>
+      <li class="sidenav-link">
+      <!-- FIXME  update link_to to correct path-->
+      <%= link_to(root_path, {class: "nav-hover"}) do %>
+      <i class="small material-icons">home</i><br />Properties
+      <% end %>
+      </li>
+      <div class="divider" style="margin: 15px 0 0 0;"></div>
+      <li class="sidenav-link">
+      <!-- FIXME  update link_to to correct path-->
+      <%= link_to(root_path, {class: "nav-hover"}) do %>
+      <i class="small material-icons">collections</i><br />Collections
+      <% end %>
+      </li>
+      <div class="divider" style="margin: 15px 0 0 0;"></div>
+      <li class="sidenav-link">
+      <!-- FIXME  update link_to to correct path-->
+      <%= link_to(root_path, {class: "nav-hover"}) do %>
+      <i class="small material-icons">apps</i><br />Misc.
+      <% end %>
+      </li>
+      <div class="divider" style="margin: 15px 0 0 0;"></div>
+      <li class="sidenav-link">
+      <!-- FIXME  update link_to to correct path-->
+      <%= link_to(root_path, {class: "nav-hover"}) do %>
+      <i class="small material-icons">assessment</i><br />Reports
+      <% end %>
+      </li>
     </ul>
 </div>

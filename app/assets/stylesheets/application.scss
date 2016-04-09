@@ -10,6 +10,11 @@ body {
     border: 2px dashed #9e9e9e;
     color: #9e9e9e;
 }
+
+.dotted:hover {
+  color: #672027;
+  border-color: #672027;
+}
 .section a i {
     color: #9e9e9e;
 }
@@ -21,11 +26,11 @@ body {
 }
 
 .card-color {
-  background-color: #FFCF62
+  background-color: #FFE38A;
 }
 
 .add-card-color {
-  background-color: #FEEAAB;
+  background-color: #FFF1C7;
 }
 .sidenav-link {
   padding: 25px 10px 0px 1%;
@@ -50,4 +55,8 @@ body {
 
   width: 100%;
   color: #672027;
+}
+
+.nav-hover:hover {
+  color: #3E4173;
 }
