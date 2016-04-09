@@ -1,5 +1,15 @@
 <%= form_for [@room, @item] do |f| %>
+<% if @item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@room.errors.count, "error") %> prohibited this room from being saved:</h2>
 
+      <ul>
+      <% @item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+<% end %>
 <%= f.label :name %>
 <%= f.text_field :name %>
 <%= f.label :purchase_date %>
