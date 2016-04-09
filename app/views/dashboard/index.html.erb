@@ -1,15 +1,129 @@
-<div class='container'>
-  <span class='header'><h1>Properties</h1></span>
-  <br />
-  <% @homes.each do |home| %>
-  <div class="panel panel-default" style="width: 200px; display: inline-block;">
-    <div class="panel-heading"><%= home.name %></div>
-    <div class="panel-body">
-      Panel content
+  <!-- Start Main View -->
+    <div class="col s9">
+      <div class="thin-container">
+        <!-- Start Property Section-->
+        <div class="section">
+            <h4>Properties
+                <a href="">
+                    <i class="material-icons">create</i>
+                </a>
+            </h4>
+            <div class="divider"></div>
+            <!-- Start Porperty Sub Section-->
+            <div class="row">
+                <!-- Start Property Cards -->
+                <% @homes.each do |home| %>
+                <div class='col s12 m8 l4'>
+                    <div class="card card-color ">
+                        <%= link_to(rooms_path, { class:"waves-effect max-width hoverable" }) do %>
+                        <div class="card-content">
+
+                            <span class="card-title"><%= home.name %></span>
+
+                        </div>
+                      <% end %>
+                    </div>
+                </div>
+                <% end %>
+                <!-- Start Add New Propertry Card -->
+                <div class='col s12 m8 l4'>
+                    <div class="card add-card-color dotted">
+                        <div class="card-content hoverable">
+                            <span class="card-title ">Add New Property</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Misc Card -->
+                <!-- End Porperty Sub Section-->
+            </div>
+            <!-- End Property Section-->
+        </div>
+        <!-- Start Property Section-->
+        <div class="section">
+            <h4>Collections
+                <a href="">
+                    <i class="material-icons">create</i>
+                </a>
+            </h4>
+            <div class="divider"></div>
+            <!-- Start Porperty Sub Section-->
+            <div class="row">
+                <!-- Start Rooms Card -->
+                <div class='col s12 m8 l4'>
+                    <div class="card card-color">
+                        <div class="card-content hoverable">
+                            <span class="card-title">Comic Books</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Rooms Card -->
+                <!-- Start Collections Card -->
+                <div class='col s12 m8 l4'>
+                    <div class="card card-color">
+                        <div class="card-content hoverable">
+                            <span class="card-title text-flow">Vinyls</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Collections Card -->
+                <!-- Start Misc Card -->
+                <div class='col s12 m8 l4'>
+                    <div class="card add-card-color dotted">
+                        <div class="card-content hoverable">
+                            <span class="card-title">Add New Collections</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Misc Card -->
+                <!-- End Porperty Sub Section-->
+            </div>
+            <!-- End Property Section-->
+        </div>
+        <!-- Start Property Section-->
+        <div class="section">
+            <h4>Misc Items
+                <a href="">
+                    <i class="material-icons">create</i>
+                </a>
+            </h4>
+            <div class="divider"></div>
+            <!-- Start Porperty Sub Section-->
+            <div class="row">
+                <!-- Start Rooms Card -->
+                <div class='col s12 m8 l4'>
+                    <div class="card card-color">
+                        <div class="card-content hoverable">
+                            <span class="card-title">Jewelry</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Rooms Card -->
+                <!-- Start Collections Card -->
+                <div class='col s12 m8 l4'>
+                    <div class="card card-color">
+                        <div class="card-content hoverable">
+                            <span class="card-title">Tools</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Collections Card -->
+                <!-- Start Misc Card -->
+                <div class='col s12 m8 l4'>
+                    <div class="card add-card-color dotted">
+                        <div class="card-content hoverable">
+                            <span class="card-title ">Add New Category</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Misc Card -->
+                <!-- End Porperty Sub Section-->
+            </div>
+            <!-- End Property Section-->
+          </div>
+        </div>
+        <!-- End Main View -->
     </div>
-  </div>
-  <% end %>
-  <span class='header'><h1>Collections</h1></span>
-  <br />
-  <span class='header'><h1>Misc Items</h1></span>
-</div>
+
+
+
+<!-- blue lighten-3 -->

@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Insurable</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+    <head>
+        <title>Insurable</title>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Site Navigation -->
+        <%= render "layouts/nav" %>
+        <!-- End Site Navigation -->
 
-<%= yield %>
+        <div class="row">
+        <!-- Start Sidebar -->
 
-</body>
+          <%= render "layouts/sidebar" %>
+
+        <!-- Start Sidebar -->
+          <%= yield %>
+        </div>
+
+        <%= render "layouts/footer" %>
+    </body>
 </html>
