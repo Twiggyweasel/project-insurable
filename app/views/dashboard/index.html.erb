@@ -28,9 +28,13 @@
                 <!-- Start Add New Propertry Card -->
                 <div class='col s12 m8 l4'>
                     <div class="card add-card-color dotted">
-                        <div class="card-content hoverable">
-                            <span class="card-title ">New Property</span>
-                        </div>
+                      <%= link_to(new_home_path, { class:"waves-effect max-width hoverable" }) do %>
+                      <div class="card-content">
+
+                          <span class="card-title">New Property</span>
+
+                      </div>
+                    <% end %>
                     </div>
                 </div>
                 <!-- End Misc Card -->
@@ -49,22 +53,7 @@
             <!-- Start Porperty Sub Section-->
             <div class="row">
                 <!-- Start Rooms Card -->
-                <div class='col s12 m8 l4'>
-                    <div class="card card-color">
-                        <div class="card-content hoverable">
-                            <span class="card-title">Comic Books</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Rooms Card -->
-                <!-- Start Collections Card -->
-                <div class='col s12 m8 l4'>
-                    <div class="card card-color">
-                        <div class="card-content hoverable">
-                            <span class="card-title text-flow">Vinyls</span>
-                        </div>
-                    </div>
-                </div>
+            
                 <!-- End Collections Card -->
                 <!-- Start Misc Card -->
                 <div class='col s12 m8 l4'>
@@ -79,7 +68,7 @@
             </div>
             <!-- End Property Section-->
         </div>
-        <!-- Start Property Section-->
+        <!-- Start Misc Section-->
         <div class="section">
             <h4>Misc Items
                 <a href="">
@@ -87,27 +76,9 @@
                 </a>
             </h4>
             <div class="divider"></div>
-            <!-- Start Porperty Sub Section-->
+            <!-- Start Misc Sub Section-->
             <div class="row">
-                <!-- Start Rooms Card -->
-                <div class='col s12 m8 l4'>
-                    <div class="card card-color">
-                        <div class="card-content hoverable">
-                            <span class="card-title">Jewelry</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Rooms Card -->
-                <!-- Start Collections Card -->
-                <div class='col s12 m8 l4'>
-                    <div class="card card-color">
-                        <div class="card-content hoverable">
-                            <span class="card-title">Tools</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Collections Card -->
-                <!-- Start Misc Card -->
+                <!-- Start Misc Cards -->
                 <div class='col s12 m8 l4'>
                     <div class="card add-card-color dotted">
                         <div class="card-content hoverable">
@@ -115,7 +86,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- End Misc Card -->
                 <!-- End Porperty Sub Section-->
             </div>
             <!-- End Property Section-->
