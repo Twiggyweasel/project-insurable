@@ -15,7 +15,7 @@
                 <% @homes.each do |home| %>
                 <div class='col s12 m8 l4'>
                     <div class="card card-color ">
-                        <%= link_to(rooms_path, { class:"waves-effect max-width hoverable" }) do %>
+                        <%= link_to(home_path(home), { class:"waves-effect max-width hoverable" }) do %>
                         <div class="card-content">
 
                             <span class="card-title"><%= home.name %></span>
@@ -53,7 +53,7 @@
             <!-- Start Porperty Sub Section-->
             <div class="row">
                 <!-- Start Rooms Card -->
-            
+
                 <!-- End Collections Card -->
                 <!-- Start Misc Card -->
                 <div class='col s12 m8 l4'>
