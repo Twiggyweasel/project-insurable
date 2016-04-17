@@ -33,7 +33,7 @@ body {
   background-color: #FFF1C7;
 }
 .sidenav-link {
-  padding: 25px 10px 0px 1%;
+  padding: 25px 10px 10px 1%;
   text-align: center;
 }
 
@@ -47,14 +47,20 @@ body {
 
 .thin-container {
 
-  width: 95%;
-  margin: 0 1%;;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .max-width {
 
   width: 100%;
   color: #672027;
+}
+
+.nav-hover {
+
+  -webkit-transition: color 1s; /* For Safari 3.1 to 6.0 */
+    transition: color 1s;
 }
 
 .nav-hover:hover {
@@ -80,4 +86,8 @@ body {
 small {
   font-size: .5em;
 
+}
+
+.nav-wrapper {
+  padding-left: 5px;
 }
