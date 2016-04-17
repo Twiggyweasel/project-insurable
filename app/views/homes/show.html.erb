@@ -2,7 +2,7 @@
   <div class="thin-container">
     <div class="row">
     <span class="page-header">
-      <h3><%= @home.name %> - <small><%= number_to_currency(@home.value) %></small></h3>
+      <h3><%= @home.name %>:<small>  <%= number_to_currency(@home.value) %></small></h3>
       <h4></h4>
       <div class="divider">
       </div>
@@ -13,12 +13,13 @@
     <div class="col s12 m6 l3">
     <div class="card small ">
       <div class="card-image">
-        <img src="http://lorempixel.com/500/500/city" class="activator"/>
+        <%= image_tag "couch-livingroom.jpg", class: "activator" %>
+        <!-- <img src="http://lorempixel.com/500/500/city" class="activator"/> -->
         <span class="card-title"><%= room.name %></span>
       </div>
 
-      <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
+      <div class="card-content activator">
+        <span class="card-title grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
         <p class="">
           Room Items: <%= room.item_count %>
           <br />
