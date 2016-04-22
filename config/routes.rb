@@ -1,13 +1,17 @@
 Rails.application.routes.draw do
   namespace :api do
     resources :homes
-  end
-
-  resources :rooms do
-    resources :items
+    
+    resources :rooms do
+      resources :items, only: [:create, :update, :destroy]
+    end
   end
 
   resources :homes
+  
+  resources :rooms do
+    resources :items, only: [:create, :update, :destroy]
+  end
 
   get 'index', to: 'pages#home'
   root 'dashboard#index'

@@ -1,54 +1,54 @@
-class Api::HomesController < Api::ApiController
+class Api::RoomsController < Api::ApiController
   skip_before_filter :verify_authenticity_token
   
   def index
-    render json: Home.all
+    render json: Room.all
   end
   
   def show
-    home = Home.find(params[:id])
-    render json: home
+    room = Room.find(params[:id])
+    render json: room
   end
   
   def create
-    home = Home.new(home_params)
-    if home.save
+    room = Room.new(room_params)
+    if room.save
       render status: 200, json:  {
         message: "Successfully created property",
-        home: home
+        room: room
       }.to_json
     else
       render status: 422, json: {
-        errors: home.errors
+        errors: room.errors
       }.to_json
     end
   end
   
   
   def update 
-    home = Home.find(params[:id])
-    if home.update(home_params)
+    room = Room.find(params[:id])
+    if room.update(room_params)
       render status: 200, json:  {
         message: "Successfully updated property",
-        home: home
+        room: room
       }.to_json
     else
       render status: 422, json: {
-        errors: home.errors
+        errors: room.errors
       }.to_json
     end
   end
   
   def destroy
-    home = Home.find(params[:id])
-    home.destroy
+    room = Room.find(params[:id])
+    room.destroy
     render status: 200, json:  {
         message: "Successfully deleted property",
       }.to_json
   end
   
   private 
-    def home_params
-      params.require(:home).permit(:name, :value, :purchase_date)
+    def room_params
+      params.require(:room).permit(:name)
     end
 end

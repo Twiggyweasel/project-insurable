@@ -39,4 +39,6 @@ ActiveRecord::Schema.define(version: 20160321033800) do
     t.datetime "updated_at", null: false
   end
 
+  add_index "rooms", ["home_id"], name: "index_rooms_on_home_id"
+
 end
