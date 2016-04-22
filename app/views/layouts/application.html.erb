@@ -10,18 +10,18 @@
     </head>
     <body>
         <!-- Site Navigation -->
-        <%= render "layouts/nav" %>
+        <%= render "layouts/nav" unless @disable_side_nav %>
         <!-- End Site Navigation -->
 
         <div class="row">
         <!-- Start Sidebar -->
 
-          <%= render "layouts/sidebar" %>
+          <%= render "layouts/sidebar" unless @disable_side_nav %>
 
         <!-- Start Sidebar -->
           <%= yield %>
         </div>
 
-        <%= render "layouts/footer" %>
+        <%= render "layouts/footer" unless @disable_side_nav %>
     </body>
 </html>

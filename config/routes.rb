@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
+  namespace :api do
+    resources :homes
+  end
+
   resources :rooms do
     resources :items
   end
 
-  resources :homes 
+  resources :homes
 
+  get 'index', to: 'pages#home'
   root 'dashboard#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
