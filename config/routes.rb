@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :homes
   
   resources :rooms do
-    resources :items, only: [:create, :update, :destroy]
+    resources :items
   end
 
   get 'index', to: 'pages#home'
