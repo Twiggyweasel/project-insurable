@@ -12,9 +12,13 @@ Rails.application.routes.draw do
   resources :rooms do
     resources :items
   end
-
+  
+  resources :collections do 
+    resources :collectables
+  end
+  
   get 'index', to: 'pages#home'
-  root 'dashboard#index'
+  root 'pages#dashboard'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

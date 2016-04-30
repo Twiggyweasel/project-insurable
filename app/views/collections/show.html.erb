@@ -1,0 +1,28 @@
+<div class="col s9">
+  <div class="thin-container">
+    <br>
+    <span class="page-header">
+    <%= @collection.name %> <%= link_to "add", new_collection_collectable_path(@collection), class: "btn right" %>
+    <br><br>
+    <div class="divider"></div>
+    </span>
+    
+    <div class="row">
+      <% @collection.collectables.each do |col| %>
+      <div class="col s3">
+        <div class="card small">
+          <div class="card-image">
+            <img src="https://placehold.it/300x300">
+            <span class="card-title"><%= col.name %></span>
+          </div>
+          <div class="card-content">
+            <%= link_to "Edit", edit_collection_collectable_path(@collection, col), class: "btn" %>
+            <%= link_to "Delete", "", class: "btn red" %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      
+    </div>
+  </div>
+</div>

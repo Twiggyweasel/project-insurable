@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160321033800) do
+ActiveRecord::Schema.define(version: 20160429224050) do
+
+  create_table "collectables", force: :cascade do |t|
+    t.integer  "collection_id"
+    t.string   "name"
+    t.date     "purchased"
+    t.date     "made"
+    t.decimal  "value"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "collectables", ["collection_id"], name: "index_collectables_on_collection_id"
+
+  create_table "collections", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "homes", force: :cascade do |t|
     t.string   "name"
