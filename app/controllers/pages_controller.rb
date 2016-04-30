@@ -7,5 +7,6 @@ class PagesController < ApplicationController
   
   def dashboard
     @homes = Home.all
+    @collections = Collection.all
   end
 end

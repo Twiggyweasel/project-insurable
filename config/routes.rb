@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   end
   
   get 'index', to: 'pages#home'
+  get 'dashboard', to: 'pages#dashboard'
   root 'pages#dashboard'
   
   # The priority is based upon order of creation: first created -> highest priority.

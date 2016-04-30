@@ -42,7 +42,7 @@
             </div>
             <!-- End Property Section-->
         </div>
-        <!-- Start Property Section-->
+        <!-- Start Collections Section-->
         <div class="section">
             <h4>Collections
                 <a href="">
@@ -50,12 +50,23 @@
                 </a>
             </h4>
             <div class="divider"></div>
-            <!-- Start Porperty Sub Section-->
+            <!-- Start Collections Sub Section-->
             <div class="row">
                 <!-- Start Rooms Card -->
 
-                <!-- End Collections Card -->
-                <!-- Start Misc Card -->
+                
+                <!-- Start Collections Cards -->
+                <% @collections.each do |col| %>
+                <div class='col s12 m8 l4'>
+                    <div class="card card-color">
+                        <div class="card-content hoverable">
+                            <span class="card-title"><%= col.name %></span>
+                        </div>
+                    </div>
+                </div>
+                <% end %>
+                <!-- End Collections Cards -->
+                <!-- Start New Collections Card -->
                 <div class='col s12 m8 l4'>
                     <div class="card add-card-color dotted">
                         <div class="card-content hoverable">
@@ -63,10 +74,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- End Misc Card -->
-                <!-- End Porperty Sub Section-->
+                <!-- End New Collections Card -->
+                <!-- End Collections Sub Section-->
             </div>
-            <!-- End Property Section-->
+            <!-- End Collections Section-->
         </div>
         <!-- Start Misc Section-->
         <div class="section">
