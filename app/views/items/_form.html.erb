@@ -10,12 +10,25 @@
       </ul>
     </div>
 <% end %>
-<%= f.label :name %>
-<%= f.text_field :name %>
-<%= f.label :purchase_date %>
-<%= f.date_field :purchase_date %>
-<%= f.label :value %>
-<%= f.number_field :value %>
-<%= f.submit "Save" %>
+<div class="input-field">
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</div>
+<div class="input-field">
+  <%= f.label :purchase_date %>
+  <%= f.date_field :purchase_date, {class: "datepicker"} %>
+</div>
+<div class="input-field">
+  <%= f.label :value %>
+  <%= f.number_field :value %>
+</div>
+<%= f.submit "Save", class: "btn" %>
 
 <% end %>
+
+<script>
+$('.datepicker').pickadate({
+ selectMonths: true, // Creates a dropdown to control month
+ selectYears: 15 // Creates a dropdown of 15 years to control year
+});
+</script>
